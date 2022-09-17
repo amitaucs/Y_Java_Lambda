@@ -10,7 +10,10 @@ public class StreamMapExample {
 
     public static void main(String[] args) {
         List<Employee> empList = EmployeeDataUtils.getAllEmployee();
-        List<String> empNameList = empList.stream().map(Employee::getName).collect(Collectors.toList());
+
+        List<String> empNameList = empList.stream()
+                .map(Employee::getName)
+                .collect(Collectors.toList());
 
         empNameList.forEach(empName -> System.out.println(empName));
     }
